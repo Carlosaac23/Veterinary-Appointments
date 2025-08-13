@@ -1,79 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Administrador de Pacientes</title>
-    <link rel="stylesheet" href="dist/style.css" />
-    <link rel="shortcut icon" href="dog-bone-svgrepo-com.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
+
+    <script src="assets/js/app.js" type="module" defer></script>
   </head>
-  <body id="body">
-    <h1 id="titulo-principal">
-      Seguimiento Pacientes
-      <span>Veterinaria</span>
-    </h1>
+  <body>
+    <header class="header">
+      <h1 class="header__title">
+        Seguimiento Pacientes
+        <span>Veterinaria</span>
+      </h1>
+    </header>
 
-    <div id="container-principal">
-      <div id="form-container">
-        <h2 id="form-title">Seguimiento Pacientes</h2>
+    <div class="container">
+      <div class="form-container">
+        <h2 class="form__title">Seguimiento Pacientes</h2>
 
-        <p id="form-subtitle">
+        <p class="form__subtitle">
           Añade Pacientes y
           <span>Administralos</span>
         </p>
 
-        <form id="formulario-cita">
+        <form class="formulario-cita">
           <div class="mb-5">
-            <label for="paciente"> Nombre Paciente: </label>
-            <input class="input" type="text" id="paciente" placeholder="Nombre Paciente" name="paciente" />
+            <label for="paciente">Nombre del paciente</label>
+            <input type="text" id="paciente" placeholder="Cooper" name="paciente" />
           </div>
 
           <div class="mb-5">
-            <label for="propietario"> Nombre Propietario: </label>
-            <input class="input" type="text" id="propietario" placeholder="Nombre Propietario" name="propietario" />
+            <label for="propietario">Nombre del propietario</label>
+            <input type="text" id="propietario" placeholder="John Doe" name="propietario" />
           </div>
 
           <div class="mb-5">
-            <label for="email"> Email Contacto: </label>
-            <input class="input" type="email" id="email" placeholder="E-mail Contacto" name="email" />
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Tucorreo@hotmail.com" name="email" />
           </div>
 
           <div class="mb-5">
-            <label for="fecha"> Fecha Alta: </label>
-            <input class="input" type="date" id="fecha" name="fecha" />
+            <label for="fecha">Fecha de alta</label>
+            <input type="date" id="fecha" name="fecha" />
           </div>
 
           <div class="mb-5">
-            <label for="sintomas"> Síntomas: </label>
-            <textarea class="input" id="sintomas" name="sintomas" placeholder="Síntomas del Paciente"></textarea>
+            <label for="sintomas">Síntomas</label>
+            <textarea id="sintomas" name="sintomas" placeholder="Síntomas del Paciente" rows="8"></textarea>
           </div>
 
-          <input class="button-27" type="submit" id="submit-button" value="Registrar Paciente" />
+          <div class="notificacion__container"></div>
+
+          <input class="form-container-btn" type="submit" id="submit-button" value="Registrar Paciente" />
         </form>
       </div>
 
-      <div id="list-container">
-        <h2 id="list-title">Listado Pacientes</h2>
-        <p id="list-subtitle">
+      <div class="list-container">
+        <h2 class="list-container__title">Listado Pacientes</h2>
+        <p class="list-container__subtitle">
           Administra tus
           <span>Pacientes y Citas</span>
         </p>
-        <div id="citas">
+        <div class="citas">
           <p>No Hay Pacientes</p>
         </div>
       </div>
     </div>
 
-    <div class="div-footer">
-      <footer class="footer">
-        <p>
-          &#169; Copyright
-          <a class="a-footer" target="_blank" href="https://github.com/Carlosaac23"> Carlos Acosta </a>
-        </p>
-      </footer>
-    </div>
-
-    <script src="js/app.js" type="module"></script>
+    <footer class="footer">
+      <p>
+        &#169; Copyright
+        <a class="footer__link" target="_blank" href="https://github.com/Carlosaac23"> Carlos Acosta </a>
+      </p>
+    </footer>
   </body>
 </html>
