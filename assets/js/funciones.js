@@ -1,4 +1,4 @@
-import mostrarNotificacion from './notificacion.js';
+import Notificacion from './classes/Notificacion.js';
 import AdminCitas from './classes/AdminCitas.js';
 import { citaObj, editando } from './variables.js';
 import { form, formInput, pacienteInput, propietarioInput, emailInput, fechaInput, sintomasInput } from './selectores.js';
@@ -13,16 +13,25 @@ export function submitCita(e) {
   e.preventDefault();
 
   if (Object.values(citaObj).some(valor => valor.trim() === '')) {
-    mostrarNotificacion('Todos los campos son obligatorios', 'error');
+    new Notificacion({
+      mensaje: 'Todos los campos son obligatorios',
+      tipo: 'error',
+    });
     return;
   }
 
   if (editando.value) {
     citas.editar({ ...citaObj });
-    mostrarNotificacion('Guardado Correctamente', 'info');
+    new Notificacion({
+      mensaje: 'Guardado Correctamente',
+      tipo: 'info',
+    });
   } else {
     citas.agregar({ ...citaObj });
-    mostrarNotificacion('Paciente Registrado', 'success');
+    new Notificacion({
+      mensaje: '¡Paciente registrado!',
+      tipo: 'success',
+    });
   }
 
   form.reset();
