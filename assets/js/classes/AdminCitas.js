@@ -64,7 +64,12 @@ export default class AdminCitas {
       const btnEliminar = document.createElement('button');
       btnEliminar.classList.add('btn-eliminar');
       btnEliminar.textContent = 'Eliminar';
-      btnEliminar.onclick = () => this.eliminar(cita.id);
+      btnEliminar.onclick = () => {
+        const confirmacion = confirm('¿Deseas eliminar esta cita?');
+        if (confirmacion) {
+          this.eliminar(cita.id);
+        }
+      };
 
       const contenedorBotones = document.createElement('div');
       contenedorBotones.classList.add('contenedorBotones');
