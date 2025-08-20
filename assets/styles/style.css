@@ -156,7 +156,7 @@ textarea:focus {
   border: none;
   border-radius: 0.625rem;
   text-align: center;
-  transition: transform 0.15s ease;
+  transition: transform 0.15s ease-out;
   cursor: pointer;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
@@ -196,7 +196,6 @@ textarea:focus {
   align-items: center;
   gap: 1.875rem;
   max-height: 615px;
-  overflow-y: scroll;
 }
 
 .divCita {
@@ -232,7 +231,7 @@ textarea:focus {
   border: 1px solid var(--yellow);
   border-radius: 0.625rem;
   text-align: center;
-  transition: transform 0.15s ease;
+  transition: transform 0.15s ease-out;
   cursor: pointer;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
@@ -251,7 +250,7 @@ textarea:focus {
   border: 1px solid var(--red);
   border-radius: 10px;
   text-align: center;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-out;
   cursor: pointer;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
@@ -296,7 +295,7 @@ textarea:focus {
   font-weight: 600;
   border-radius: 0.625rem;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  animation: slideIn 0.25s ease;
+  animation: slideIn 0.25s ease-out;
 }
 
 .noti-error {
@@ -317,7 +316,7 @@ textarea:focus {
 .noti-error.hide,
 .noti-success.hide,
 .noti-info.hide {
-  animation: slideOut 0.25s ease;
+  animation: slideOut 0.25s ease-out;
 }
 
 @keyframes slideIn {
