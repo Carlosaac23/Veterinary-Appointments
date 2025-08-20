@@ -14,7 +14,7 @@ export function submitCita(e) {
 
   if (Object.values(citaObj).some(valor => valor.trim() === '')) {
     new Notificacion({
-      mensaje: 'Todos los campos son obligatorios',
+      mensaje: '¡Todos los campos son obligatorios!',
       tipo: 'error',
     });
     return;
