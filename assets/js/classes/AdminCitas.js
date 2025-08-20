@@ -61,6 +61,7 @@ export default class AdminCitas {
       const clone = structuredClone(cita);
       btnEditar.onclick = () => cargarEdicion(clone);
 
+      contenedorCitas.style.overflowY = 'auto';
       const btnEliminar = document.createElement('button');
       btnEliminar.classList.add('btn-eliminar');
       btnEliminar.textContent = 'Eliminar';
