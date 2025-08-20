@@ -23,7 +23,7 @@ export function submitCita(e) {
   if (editando.value) {
     citas.editar({ ...citaObj });
     new Notificacion({
-      mensaje: 'Guardado Correctamente',
+      mensaje: 'Paciente guardado correctamente',
       tipo: 'info',
     });
   } else {
