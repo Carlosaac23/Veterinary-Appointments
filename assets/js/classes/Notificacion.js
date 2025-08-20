@@ -19,7 +19,11 @@ export default class Notificacion {
     };
 
     alerta.classList.add(tipos[this.tipo]);
-    alerta.textContent = this.mensaje;
+    alerta.innerHTML = `
+      <h1>${this.tipo}</h1>
+      <p>${this.mensaje}</p>
+    `;
+
     notificacionContainer.appendChild(alerta);
     setTimeout(() => {
       alerta.classList.add('hide');
@@ -27,6 +31,6 @@ export default class Notificacion {
       alerta.addEventListener('animationend', () => {
         alerta.remove();
       });
-    }, 2500);
+    }, 3000);
   }
 }
