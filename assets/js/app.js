@@ -1,11 +1,4 @@
-import {
-  pacienteInput,
-  propietarioInput,
-  emailInput,
-  fechaInput,
-  sintomasInput,
-  form,
-} from './selectores.js';
+import { pacienteInput, propietarioInput, emailInput, fechaInput, sintomasInput, form } from './selectores.js';
 import { datosCita, submitCita } from './funciones.js';
 
 // Events
